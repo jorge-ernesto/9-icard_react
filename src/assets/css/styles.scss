@@ -1,0 +1,144 @@
+.login-admin {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+
+    &__content {
+        background-color: #fff;
+        padding: 50px 50px;
+        border-radius: 20px;
+        width: 500px;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+
+        >h1 {
+            font-size: 35px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.login-form-admin {
+    .btn.btn-primary {
+        margin-top: 4px;
+    }
+
+    input.form-control {
+        background-color: #f1f1f1 !important;
+        border-color: #f1f1f1 !important;
+        border-radius: 10px !important;
+
+        &:focus {
+            background-color: #fff !important;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2) !important;
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2) !important;
+            -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2) !important;
+        }
+    }
+
+    button.btn.btn-primary {
+        background-color: #0098d3;
+        border: #0098d3;
+        color: #fff;
+        border-radius: 8px;
+    }
+}
+
+// Obtuvimos estos estilos de ChatGPT
+.image-wrap img {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+.tables-list-admin {
+    display: flex;
+    flex-wrap: wrap;
+
+    .table-admin {
+        position: relative;
+        flex: 0 1 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // .table-admin:hover
+        &:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        .badge {
+            margin: 0;
+            font-size: 20px;
+            position: absolute;
+            top: 30px;
+        }
+
+        svg {
+            width: 200px;
+            height: 200px;
+
+            // svg.busy
+            &.busy {
+                fill: #FFC107;
+            }
+
+            // svg.pending
+            // Si hay un svg con estilos pending y busy a la vez, pending prevalece ya que esta siendo cargado despues de busy, esto es por la jerarquia
+            &.pending {
+                fill: #0D6EFD;
+            }
+        }
+    }
+}
+
+.order-item-admin {
+    position: relative;
+    border: 1px solid #000;
+    padding: 20px;
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.pending {
+        background-color: rgb(255, 220, 155);
+    }
+
+    &.delivered {
+        background-color: rgb(183, 255, 115);
+    }
+
+    &__time {
+        position: absolute;
+        top: -14px;
+        right: 10px;
+        background-color: #fff;
+        padding: 5px 20px;
+        border: 1px solid #000;
+    }
+
+    &__product {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 150px;
+            margin-right: 20px;
+        }
+
+        p {
+            margin: 0px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+}

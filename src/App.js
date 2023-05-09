@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+// Podemos escribir `rfc` (React Function Component) o `rcc` (React Class Component) en VSCode,
+// para crear rapidamente un componente en React
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Impostar Estilos
+import './assets/css/styles.scss'
+
+// Importar Componentes
+import { Navigation } from './routes'
+
+// Importar Contexto
+import { AuthProvider } from './context'
+
+export default function App() {
+    return (
+        // Rutas
+        // <div>
+        //     <Navigation />
+        // </div>
+
+        // Rutas envueltas en contexto, esta es otra forma de hacerlo
+        // <AuthProvider>
+        //     <Navigation />
+        // </AuthProvider>
+
+        // Rutas envueltas en contexto
+        <AuthProvider
+            children={<Navigation />}
+        />
+    )
 }
-
-export default App;

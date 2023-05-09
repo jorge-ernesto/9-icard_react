@@ -1,0 +1,5 @@
+export * from './IndexProduct'
+export * from './HeaderProduct'
+export * from './ListProduct'
+export * from './CreateEditProduct'
+export * from './ModalProduct'
